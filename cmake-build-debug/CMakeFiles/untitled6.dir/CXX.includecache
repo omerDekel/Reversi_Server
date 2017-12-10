@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/omer/CLionProjects/untitled6/Server.cpp
+Server.h
+/home/omer/CLionProjects/untitled6/Server.h
+sys/socket.h
+-
+netinet/in.h
+-
+unistd.h
+-
+string.h
+-
+iostream
+-
+stdio.h
+-
+fstream
+-
+
+/home/omer/CLionProjects/untitled6/Server.h
+
+/home/omer/CLionProjects/untitled6/main.cpp
+iostream
+-
+Server.h
+/home/omer/CLionProjects/untitled6/Server.h
+stdlib.h
+-
+fstream
+-
+
