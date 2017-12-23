@@ -41,7 +41,7 @@ void Server::start() {
     while (true) {
         cout << "Waiting for client connections..." << endl;
 
-// Accept a new client connection
+// Accept a new client connection  תהליכונים
         clientSocket[count] = accept(serverSocket1 , (struct sockaddr *) &clientAddress , &clientAddressLen);
         cout << "client socket is" << clientSocket[count] << endl;
         if (clientSocket[count] == -1) {

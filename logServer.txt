@@ -1,0 +1,17 @@
+commit 9482efda41f3036ec5757165f9c9f4c707858ddf
+Author: OmerDekel <omerdekel92@gmail.com>
+Date:   Sun Dec 10 21:36:55 2017 +0200
+
+    Updating the server
+
+commit d500a8e9536b4980149f7e146a7f63c9bf60096d
+Author: OmerDekel <omerdekel92@gmail.com>
+Date:   Fri Dec 8 16:24:55 2017 +0200
+
+    Creating the server game Project
+
+commit 07ed2cbdd9348f6f521c0a938ee6bafda06c246e
+Author: OmerDekel <omerdekel92@gmail.com>
+Date:   Fri Dec 8 16:19:45 2017 +0200
+
+    Initial commit
