@@ -3,13 +3,13 @@
 #include <stdlib.h>
 #include <fstream>
 
-#include "GamesList.h
+#include "Games.h"
 
 using
 namespace
 std;
 
-GamesList g_game_list;
+Games g_game_list;
 
 int handle_single_player(void* player_socket)
 {

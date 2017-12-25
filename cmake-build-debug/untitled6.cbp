@@ -84,10 +84,43 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/omer/CLionProjects/untitled6/Command.h">
+			<Option target="untitled6"/>
+		</Unit>
+		<Unit filename="/home/omer/CLionProjects/untitled6/CommandsManeger.cpp">
+			<Option target="untitled6"/>
+		</Unit>
+		<Unit filename="/home/omer/CLionProjects/untitled6/CommandsManeger.h">
+			<Option target="untitled6"/>
+		</Unit>
+		<Unit filename="/home/omer/CLionProjects/untitled6/GameManager.cpp">
+			<Option target="untitled6"/>
+		</Unit>
+		<Unit filename="/home/omer/CLionProjects/untitled6/GameManager.h">
+			<Option target="untitled6"/>
+		</Unit>
+		<Unit filename="/home/omer/CLionProjects/untitled6/Games.cpp">
+			<Option target="untitled6"/>
+		</Unit>
+		<Unit filename="/home/omer/CLionProjects/untitled6/Games.h">
+			<Option target="untitled6"/>
+		</Unit>
+		<Unit filename="/home/omer/CLionProjects/untitled6/JoinCommand.cpp">
+			<Option target="untitled6"/>
+		</Unit>
+		<Unit filename="/home/omer/CLionProjects/untitled6/JoinCommand.h">
+			<Option target="untitled6"/>
+		</Unit>
 		<Unit filename="/home/omer/CLionProjects/untitled6/Server.cpp">
 			<Option target="untitled6"/>
 		</Unit>
 		<Unit filename="/home/omer/CLionProjects/untitled6/Server.h">
+			<Option target="untitled6"/>
+		</Unit>
+		<Unit filename="/home/omer/CLionProjects/untitled6/StartCommand.cpp">
+			<Option target="untitled6"/>
+		</Unit>
+		<Unit filename="/home/omer/CLionProjects/untitled6/StartCommand.h">
 			<Option target="untitled6"/>
 		</Unit>
 		<Unit filename="/home/omer/CLionProjects/untitled6/main.cpp">

@@ -12,6 +12,12 @@
 
 using namespace std;
 
+void *HandlePlayersThread(void *s)
+{
+    Server *myServer = (Server *)s;
+    myServer->handlePlayers();
+}
+
 Server::Server(int port) : port1(port) , serverSocket1(0) {
     cout << "Server" << endl;
 }
@@ -38,6 +44,7 @@ void Server::start() {
 // Define the client socket's structures
     struct sockaddr_in clientAddress;
     socklen_t clientAddressLen = sizeof((struct sockaddr*) &clientAddress);
+    pthread_t threads[100];
     while (true) {
         cout << "Waiting for client connections..." << endl;
 
@@ -47,12 +54,15 @@ void Server::start() {
         if (clientSocket[count] == -1) {
             throw "Error on accept";
         }
+
+
         count++;
         //if there are two clients .
         if (count > 0 && (count % 2 == 0)) {
             write(clientSocket[0] , "1" , sizeof("1"));
             write(clientSocket[1] , "2" , sizeof("2"));
-            handlePlayers();
+            //handlePlayers();
+            pthread_create(&threads[count/2], NULL, HandlePlayersThread, this);
             // Close communication with the client
             close(clientSocket[0]);
             close(clientSocket[1]);

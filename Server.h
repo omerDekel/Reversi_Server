@@ -21,6 +21,7 @@ public:
      * stop the server
      */
     void stop();
+    void handlePlayers();
 
 private:
     int port1;
@@ -29,7 +30,6 @@ private:
     /**
      * handle the players
      */
-    void handlePlayers();
     char buf[8];
 
 };

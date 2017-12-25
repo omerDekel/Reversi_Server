@@ -123,6 +123,114 @@ untitled6/fast:
 	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/build
 .PHONY : untitled6/fast
 
+CommandsManeger.o: CommandsManeger.cpp.o
+
+.PHONY : CommandsManeger.o
+
+# target to build an object file
+CommandsManeger.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/CommandsManeger.cpp.o
+.PHONY : CommandsManeger.cpp.o
+
+CommandsManeger.i: CommandsManeger.cpp.i
+
+.PHONY : CommandsManeger.i
+
+# target to preprocess a source file
+CommandsManeger.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/CommandsManeger.cpp.i
+.PHONY : CommandsManeger.cpp.i
+
+CommandsManeger.s: CommandsManeger.cpp.s
+
+.PHONY : CommandsManeger.s
+
+# target to generate assembly for a file
+CommandsManeger.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/CommandsManeger.cpp.s
+.PHONY : CommandsManeger.cpp.s
+
+GameManager.o: GameManager.cpp.o
+
+.PHONY : GameManager.o
+
+# target to build an object file
+GameManager.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/GameManager.cpp.o
+.PHONY : GameManager.cpp.o
+
+GameManager.i: GameManager.cpp.i
+
+.PHONY : GameManager.i
+
+# target to preprocess a source file
+GameManager.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/GameManager.cpp.i
+.PHONY : GameManager.cpp.i
+
+GameManager.s: GameManager.cpp.s
+
+.PHONY : GameManager.s
+
+# target to generate assembly for a file
+GameManager.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/GameManager.cpp.s
+.PHONY : GameManager.cpp.s
+
+Games.o: Games.cpp.o
+
+.PHONY : Games.o
+
+# target to build an object file
+Games.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/Games.cpp.o
+.PHONY : Games.cpp.o
+
+Games.i: Games.cpp.i
+
+.PHONY : Games.i
+
+# target to preprocess a source file
+Games.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/Games.cpp.i
+.PHONY : Games.cpp.i
+
+Games.s: Games.cpp.s
+
+.PHONY : Games.s
+
+# target to generate assembly for a file
+Games.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/Games.cpp.s
+.PHONY : Games.cpp.s
+
+JoinCommand.o: JoinCommand.cpp.o
+
+.PHONY : JoinCommand.o
+
+# target to build an object file
+JoinCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/JoinCommand.cpp.o
+.PHONY : JoinCommand.cpp.o
+
+JoinCommand.i: JoinCommand.cpp.i
+
+.PHONY : JoinCommand.i
+
+# target to preprocess a source file
+JoinCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/JoinCommand.cpp.i
+.PHONY : JoinCommand.cpp.i
+
+JoinCommand.s: JoinCommand.cpp.s
+
+.PHONY : JoinCommand.s
+
+# target to generate assembly for a file
+JoinCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/JoinCommand.cpp.s
+.PHONY : JoinCommand.cpp.s
+
 Server.o: Server.cpp.o
 
 .PHONY : Server.o
@@ -149,6 +257,33 @@ Server.s: Server.cpp.s
 Server.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/Server.cpp.s
 .PHONY : Server.cpp.s
+
+StartCommand.o: StartCommand.cpp.o
+
+.PHONY : StartCommand.o
+
+# target to build an object file
+StartCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/StartCommand.cpp.o
+.PHONY : StartCommand.cpp.o
+
+StartCommand.i: StartCommand.cpp.i
+
+.PHONY : StartCommand.i
+
+# target to preprocess a source file
+StartCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/StartCommand.cpp.i
+.PHONY : StartCommand.cpp.i
+
+StartCommand.s: StartCommand.cpp.s
+
+.PHONY : StartCommand.s
+
+# target to generate assembly for a file
+StartCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/StartCommand.cpp.s
+.PHONY : StartCommand.cpp.s
 
 main.o: main.cpp.o
 
@@ -186,9 +321,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... untitled6"
+	@echo "... CommandsManeger.o"
+	@echo "... CommandsManeger.i"
+	@echo "... CommandsManeger.s"
+	@echo "... GameManager.o"
+	@echo "... GameManager.i"
+	@echo "... GameManager.s"
+	@echo "... Games.o"
+	@echo "... Games.i"
+	@echo "... Games.s"
+	@echo "... JoinCommand.o"
+	@echo "... JoinCommand.i"
+	@echo "... JoinCommand.s"
 	@echo "... Server.o"
 	@echo "... Server.i"
 	@echo "... Server.s"
+	@echo "... StartCommand.o"
+	@echo "... StartCommand.i"
+	@echo "... StartCommand.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
