@@ -1,28 +1,40 @@
 //
 // Created by omer on 02/12/17.
 //
-
+#include "stdio.h"
 #include "Server.h"
+#include "GameManager.h"
+#include "CommandsManager.h"
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <unistd.h>
 #include <string.h>
 #include <iostream>
 #include <fstream>
+#include <sstream>
+#include <boost/algorithm/string/classification.hpp>
+#include <boost/algorithm/string/split.hpp>
 
+#include <boost/foreach.hpp>
+using namespace boost ::algorithm;
 using namespace std;
 
-void *HandlePlayersThread(void *s)
-{
+/*void *ExcuteThread (int socket) {
+
+}
+void *HandlePlayersThread(void *s) {
     Server *myServer = (Server *)s;
     myServer->handlePlayers();
-}
+}*/
 
 Server::Server(int port) : port1(port) , serverSocket1(0) {
     cout << "Server" << endl;
 }
 
 void Server::start() {
+    /*CommandsManager commandsManager;
+    GameManager gameManager;*/
+    vector<pthread_t> threads;
     int count = 0;
 // Create a socket point
     serverSocket1 = socket(AF_INET , SOCK_STREAM , 0);
@@ -44,21 +56,23 @@ void Server::start() {
 // Define the client socket's structures
     struct sockaddr_in clientAddress;
     socklen_t clientAddressLen = sizeof((struct sockaddr*) &clientAddress);
-    pthread_t threads[100];
+    //pthread_t threads[100];
+//thread
     while (true) {
         cout << "Waiting for client connections..." << endl;
 
 // Accept a new client connection  תהליכונים
-        clientSocket[count] = accept(serverSocket1 , (struct sockaddr *) &clientAddress , &clientAddressLen);
-        cout << "client socket is" << clientSocket[count] << endl;
-        if (clientSocket[count] == -1) {
+        int clientSocket = accept(serverSocket1 , (struct sockaddr *) &clientAddress , &clientAddressLen);
+        cout << "client socket is" << clientSocket << endl;
+        if (clientSocket == -1) {
             throw "Error on accept";
         }
+        handleClient(clientSocket);
 
 
-        count++;
+        //count++;
         //if there are two clients .
-        if (count > 0 && (count % 2 == 0)) {
+        /*if (count > 0 && (count % 2 == 0)) {
             write(clientSocket[0] , "1" , sizeof("1"));
             write(clientSocket[1] , "2" , sizeof("2"));
             //handlePlayers();
@@ -66,12 +80,31 @@ void Server::start() {
             // Close communication with the client
             close(clientSocket[0]);
             close(clientSocket[1]);
-        }
+        }*/
     }
 }
-
+void Server::handleClient(int socket) {
+    GameManager gameManager;
+    CommandsManager commandsManager(socket, gameManager);
+    string command;
+    string arg;
+    vector<string> v;
+    vector<string> args;
+    //stringstream stringstream1;
+    while (true) {
+        int n = read(socket, buf , sizeof(buf));
+        if (n == -1) {
+            cout << "Error" << endl;
+            return;
+        }
+        arg = strstr(buf," ");
+        command = buf;
+        args.push_back(arg);
+        commandsManager.executeCommand(command, args, socket, gameManager);
+    }
+}
 // Handle requests from a specific client
-void Server::handlePlayers() {
+/*void Server::handlePlayers() {
     for (int current_player = 0;; current_player = (current_player + 1) % 2) {
         std::cout << "Reading from player #" << current_player << std::endl;
         int other_player = (current_player + 1) % 2;
@@ -107,7 +140,7 @@ void Server::handlePlayers() {
         }
     }
 
-}
+}*/
 
 void Server::stop() {
     close(serverSocket1);

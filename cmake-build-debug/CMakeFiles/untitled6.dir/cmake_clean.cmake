@@ -5,7 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/untitled6.dir/StartCommand.cpp.o"
   "CMakeFiles/untitled6.dir/GameManager.cpp.o"
   "CMakeFiles/untitled6.dir/JoinCommand.cpp.o"
-  "CMakeFiles/untitled6.dir/CommandsManeger.cpp.o"
+  "CMakeFiles/untitled6.dir/CommandsManager.cpp.o"
   "untitled6.pdb"
   "untitled6"
 )

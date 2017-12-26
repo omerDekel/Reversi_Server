@@ -10,11 +10,13 @@
 
 class CommandsManager {
     public:
-    CommandsManager();
+    CommandsManager(int socket,GameManager &gameManager);
     ~CommandsManager();
     void executeCommand(string command, vector<string> args,int socket,GameManager &gameManager);
     private:
         map<string, Command *> commandsMap;
+    int socket;
+    GameManager gameManager;
     };
 
 

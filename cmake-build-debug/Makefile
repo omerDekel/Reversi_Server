@@ -123,32 +123,32 @@ untitled6/fast:
 	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/build
 .PHONY : untitled6/fast
 
-CommandsManeger.o: CommandsManeger.cpp.o
+CommandsManager.o: CommandsManager.cpp.o
 
-.PHONY : CommandsManeger.o
+.PHONY : CommandsManager.o
 
 # target to build an object file
-CommandsManeger.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/CommandsManeger.cpp.o
-.PHONY : CommandsManeger.cpp.o
+CommandsManager.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/CommandsManager.cpp.o
+.PHONY : CommandsManager.cpp.o
 
-CommandsManeger.i: CommandsManeger.cpp.i
+CommandsManager.i: CommandsManager.cpp.i
 
-.PHONY : CommandsManeger.i
+.PHONY : CommandsManager.i
 
 # target to preprocess a source file
-CommandsManeger.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/CommandsManeger.cpp.i
-.PHONY : CommandsManeger.cpp.i
+CommandsManager.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/CommandsManager.cpp.i
+.PHONY : CommandsManager.cpp.i
 
-CommandsManeger.s: CommandsManeger.cpp.s
+CommandsManager.s: CommandsManager.cpp.s
 
-.PHONY : CommandsManeger.s
+.PHONY : CommandsManager.s
 
 # target to generate assembly for a file
-CommandsManeger.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/CommandsManeger.cpp.s
-.PHONY : CommandsManeger.cpp.s
+CommandsManager.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/CommandsManager.cpp.s
+.PHONY : CommandsManager.cpp.s
 
 GameManager.o: GameManager.cpp.o
 
@@ -321,9 +321,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... untitled6"
-	@echo "... CommandsManeger.o"
-	@echo "... CommandsManeger.i"
-	@echo "... CommandsManeger.s"
+	@echo "... CommandsManager.o"
+	@echo "... CommandsManager.i"
+	@echo "... CommandsManager.s"
 	@echo "... GameManager.o"
 	@echo "... GameManager.i"
 	@echo "... GameManager.s"

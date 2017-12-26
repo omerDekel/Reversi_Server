@@ -20,17 +20,18 @@ public:
     /**
      * stop the server
      */
+    void handleClient(int socket);
     void stop();
     void handlePlayers();
 
 private:
     int port1;
     int serverSocket1;
-    int clientSocket[2];
+    //int clientSocket[2];
     /**
      * handle the players
      */
-    char buf[8];
+    char buf[50];
 
 };
 

@@ -201,28 +201,28 @@ CMakeFiles/untitled6.dir/JoinCommand.cpp.o.provides: CMakeFiles/untitled6.dir/Jo
 CMakeFiles/untitled6.dir/JoinCommand.cpp.o.provides.build: CMakeFiles/untitled6.dir/JoinCommand.cpp.o
 
 
-CMakeFiles/untitled6.dir/CommandsManeger.cpp.o: CMakeFiles/untitled6.dir/flags.make
-CMakeFiles/untitled6.dir/CommandsManeger.cpp.o: ../CommandsManeger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omer/CLionProjects/untitled6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/untitled6.dir/CommandsManeger.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled6.dir/CommandsManeger.cpp.o -c /home/omer/CLionProjects/untitled6/CommandsManeger.cpp
+CMakeFiles/untitled6.dir/CommandsManager.cpp.o: CMakeFiles/untitled6.dir/flags.make
+CMakeFiles/untitled6.dir/CommandsManager.cpp.o: ../CommandsManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omer/CLionProjects/untitled6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/untitled6.dir/CommandsManager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled6.dir/CommandsManager.cpp.o -c /home/omer/CLionProjects/untitled6/CommandsManager.cpp
 
-CMakeFiles/untitled6.dir/CommandsManeger.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled6.dir/CommandsManeger.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omer/CLionProjects/untitled6/CommandsManeger.cpp > CMakeFiles/untitled6.dir/CommandsManeger.cpp.i
+CMakeFiles/untitled6.dir/CommandsManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled6.dir/CommandsManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omer/CLionProjects/untitled6/CommandsManager.cpp > CMakeFiles/untitled6.dir/CommandsManager.cpp.i
 
-CMakeFiles/untitled6.dir/CommandsManeger.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled6.dir/CommandsManeger.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omer/CLionProjects/untitled6/CommandsManeger.cpp -o CMakeFiles/untitled6.dir/CommandsManeger.cpp.s
+CMakeFiles/untitled6.dir/CommandsManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled6.dir/CommandsManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omer/CLionProjects/untitled6/CommandsManager.cpp -o CMakeFiles/untitled6.dir/CommandsManager.cpp.s
 
-CMakeFiles/untitled6.dir/CommandsManeger.cpp.o.requires:
+CMakeFiles/untitled6.dir/CommandsManager.cpp.o.requires:
 
-.PHONY : CMakeFiles/untitled6.dir/CommandsManeger.cpp.o.requires
+.PHONY : CMakeFiles/untitled6.dir/CommandsManager.cpp.o.requires
 
-CMakeFiles/untitled6.dir/CommandsManeger.cpp.o.provides: CMakeFiles/untitled6.dir/CommandsManeger.cpp.o.requires
-	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/CommandsManeger.cpp.o.provides.build
-.PHONY : CMakeFiles/untitled6.dir/CommandsManeger.cpp.o.provides
+CMakeFiles/untitled6.dir/CommandsManager.cpp.o.provides: CMakeFiles/untitled6.dir/CommandsManager.cpp.o.requires
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/CommandsManager.cpp.o.provides.build
+.PHONY : CMakeFiles/untitled6.dir/CommandsManager.cpp.o.provides
 
-CMakeFiles/untitled6.dir/CommandsManeger.cpp.o.provides.build: CMakeFiles/untitled6.dir/CommandsManeger.cpp.o
+CMakeFiles/untitled6.dir/CommandsManager.cpp.o.provides.build: CMakeFiles/untitled6.dir/CommandsManager.cpp.o
 
 
 # Object files for target untitled6
@@ -233,7 +233,7 @@ untitled6_OBJECTS = \
 "CMakeFiles/untitled6.dir/StartCommand.cpp.o" \
 "CMakeFiles/untitled6.dir/GameManager.cpp.o" \
 "CMakeFiles/untitled6.dir/JoinCommand.cpp.o" \
-"CMakeFiles/untitled6.dir/CommandsManeger.cpp.o"
+"CMakeFiles/untitled6.dir/CommandsManager.cpp.o"
 
 # External object files for target untitled6
 untitled6_EXTERNAL_OBJECTS =
@@ -244,7 +244,7 @@ untitled6: CMakeFiles/untitled6.dir/Games.cpp.o
 untitled6: CMakeFiles/untitled6.dir/StartCommand.cpp.o
 untitled6: CMakeFiles/untitled6.dir/GameManager.cpp.o
 untitled6: CMakeFiles/untitled6.dir/JoinCommand.cpp.o
-untitled6: CMakeFiles/untitled6.dir/CommandsManeger.cpp.o
+untitled6: CMakeFiles/untitled6.dir/CommandsManager.cpp.o
 untitled6: CMakeFiles/untitled6.dir/build.make
 untitled6: CMakeFiles/untitled6.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omer/CLionProjects/untitled6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable untitled6"
@@ -261,7 +261,7 @@ CMakeFiles/untitled6.dir/requires: CMakeFiles/untitled6.dir/Games.cpp.o.requires
 CMakeFiles/untitled6.dir/requires: CMakeFiles/untitled6.dir/StartCommand.cpp.o.requires
 CMakeFiles/untitled6.dir/requires: CMakeFiles/untitled6.dir/GameManager.cpp.o.requires
 CMakeFiles/untitled6.dir/requires: CMakeFiles/untitled6.dir/JoinCommand.cpp.o.requires
-CMakeFiles/untitled6.dir/requires: CMakeFiles/untitled6.dir/CommandsManeger.cpp.o.requires
+CMakeFiles/untitled6.dir/requires: CMakeFiles/untitled6.dir/CommandsManager.cpp.o.requires
 
 .PHONY : CMakeFiles/untitled6.dir/requires
 

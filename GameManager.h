@@ -20,6 +20,7 @@ public:
     void add_game(std::string& game_name, Games);
     //std::vector<int> get_game_players(const std::string& game_name) const;
     void remove_game(const std::string& game_name);
+    void play_game(int socket1, int socket2);
 
 private:
     void _lock_mutex();
@@ -27,6 +28,7 @@ private:
 
     std::map<std::string, /*std::vector<int>*/Games> m_games;
     pthread_mutex_t m_mutex;
+    //GameManager &gameManager1;
 
 };
 

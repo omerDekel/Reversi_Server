@@ -9,10 +9,14 @@
 #include <iostream>
 using namespace std;
 class JoinCommand :  public Command {
-    virtual void execute(vector<string> args, int socket,GameManager &gameManager);
-    virtual ~Command() {}
+public:
+    virtual void execute(vector<string> args/*, int socket,GameManager &gameManager*/);
+    //virtual ~Command() {}
+    JoinCommand(int socket, GameManager &gameManager);
+
 private:
     int socket;
+    GameManager gameManager;
 };
 
 

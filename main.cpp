@@ -5,26 +5,28 @@
 
 #include "Games.h"
 
-using
-namespace
-std;
+using namespace std;
 
-Games g_game_list;
+/*void *StartThread(void *s) {
 
-int handle_single_player(void* player_socket)
+}*/
+
+//Games g_game_list;
+
+/*int handle_single_player(void* player_socket)
 {
     // got a list_games command
     std::vector<std::string> games = g_game_list.get_game_list();
     // turn games int blabla buffer
     write(player_socket, blabla, sizeof(blabla));
 
-}
+}*/
 
 
 int main() {
     ifstream inFile;
     int port;
-    inFile.open("/home/dana/CLionProjects/server/settings");
+    inFile.open("/home/omer/CLionProjects/untitled6/settings");
     inFile>> port;
     cout<<port;
     Server server(port);

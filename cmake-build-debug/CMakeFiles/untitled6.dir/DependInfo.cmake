@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/omer/CLionProjects/untitled6/CommandsManeger.cpp" "/home/omer/CLionProjects/untitled6/cmake-build-debug/CMakeFiles/untitled6.dir/CommandsManeger.cpp.o"
+  "/home/omer/CLionProjects/untitled6/CommandsManager.cpp" "/home/omer/CLionProjects/untitled6/cmake-build-debug/CMakeFiles/untitled6.dir/CommandsManager.cpp.o"
   "/home/omer/CLionProjects/untitled6/GameManager.cpp" "/home/omer/CLionProjects/untitled6/cmake-build-debug/CMakeFiles/untitled6.dir/GameManager.cpp.o"
   "/home/omer/CLionProjects/untitled6/Games.cpp" "/home/omer/CLionProjects/untitled6/cmake-build-debug/CMakeFiles/untitled6.dir/Games.cpp.o"
   "/home/omer/CLionProjects/untitled6/JoinCommand.cpp" "/home/omer/CLionProjects/untitled6/cmake-build-debug/CMakeFiles/untitled6.dir/JoinCommand.cpp.o"

@@ -87,10 +87,10 @@
 		<Unit filename="/home/omer/CLionProjects/untitled6/Command.h">
 			<Option target="untitled6"/>
 		</Unit>
-		<Unit filename="/home/omer/CLionProjects/untitled6/CommandsManeger.cpp">
+		<Unit filename="/home/omer/CLionProjects/untitled6/CommandsManager.cpp">
 			<Option target="untitled6"/>
 		</Unit>
-		<Unit filename="/home/omer/CLionProjects/untitled6/CommandsManeger.h">
+		<Unit filename="/home/omer/CLionProjects/untitled6/CommandsManager.h">
 			<Option target="untitled6"/>
 		</Unit>
 		<Unit filename="/home/omer/CLionProjects/untitled6/GameManager.cpp">
