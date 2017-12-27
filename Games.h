@@ -13,7 +13,7 @@ using namespace std;
 class Games {
 public:
     Games(){}
-    Games(string &name);
+    Games(string &name, int socket);
     std::vector<std::string> get_game_list() const;
     void start_game(const std::string& game_name);
     void join_game(const std::string& game_name, const int player_socket);
@@ -23,29 +23,26 @@ public:
     void addPlayer(int socket);
     int getCountClients() const;
 
-    int getSocket1() ;
+    int getSocket1() const ;
 
-    int getSocket2() ;
+    int getSocket2() const ;
+    void setSocket1(int socket1);
+
+    void setSocket2(int socket2);
+    /*std::map<std::string, std::vector<int>> m_games*/;
+    pthread_mutex_t m_mutex;
 
 private:
     void _lock_mutex();
     void _unlock_mutex();
     string gameName;
+    int socket1;
+    int socket2;
+
     //int countClients = 0;
 /*public:
     void setCountClients(int countClients);*/
 
-private:
-    int socket1;
-public:
-    void setSocket1(int socket1);
-
-    void setSocket2(int socket2);
-
-private:
-    int socket2;
-    /*std::map<std::string, std::vector<int>> m_games*/;
-    pthread_mutex_t m_mutex;
 };
 
 

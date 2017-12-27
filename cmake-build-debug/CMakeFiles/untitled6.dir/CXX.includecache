@@ -97,8 +97,6 @@ iostream
 -
 fstream
 -
-sstream
--
 boost/algorithm/string/classification.hpp
 -
 boost/algorithm/string/split.hpp
@@ -107,6 +105,16 @@ boost/foreach.hpp
 -
 
 /home/omer/CLionProjects/untitled6/Server.h
+stdio.h
+/home/omer/CLionProjects/untitled6/stdio.h
+GameManager.h
+/home/omer/CLionProjects/untitled6/GameManager.h
+iostream
+-
+sys/types.h
+-
+vector
+-
 
 /home/omer/CLionProjects/untitled6/StartCommand.cpp
 unistd.h

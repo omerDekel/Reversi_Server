@@ -11,23 +11,22 @@
 #include <string.h>
 #include <iostream>
 #include <fstream>
-#include <sstream>
 #include <boost/algorithm/string/classification.hpp>
 #include <boost/algorithm/string/split.hpp>
-
 #include <boost/foreach.hpp>
 using namespace boost ::algorithm;
 using namespace std;
 
 /*void *ExcuteThread (int socket) {
 
-}
-void *HandlePlayersThread(void *s) {
+}*/
+/*void *HandleClientThread(void *s) {
     Server *myServer = (Server *)s;
-    myServer->handlePlayers();
+    myServer->handleClient(myServer->getClientSocket());
 }*/
 
 Server::Server(int port) : port1(port) , serverSocket1(0) {
+    //this->gameManager = gameManager;
     cout << "Server" << endl;
 }
 
@@ -62,11 +61,17 @@ void Server::start() {
         cout << "Waiting for client connections..." << endl;
 
 // Accept a new client connection  תהליכונים
-        int clientSocket = accept(serverSocket1 , (struct sockaddr *) &clientAddress , &clientAddressLen);
+        clientSocket = accept(serverSocket1 , (struct sockaddr *) &clientAddress , &clientAddressLen);
         cout << "client socket is" << clientSocket << endl;
         if (clientSocket == -1) {
             throw "Error on accept";
         }
+
+        /*int rc = pthread_create(&threads.back(), NULL, HandleClientThread ,this);
+        if (rc) {
+            cout << "Error: unable to create thread, " << rc << endl;
+            exit(-1);
+        }*/
         handleClient(clientSocket);
 
 
@@ -84,24 +89,28 @@ void Server::start() {
     }
 }
 void Server::handleClient(int socket) {
-    GameManager gameManager;
+    //GameManager gameManager;
     CommandsManager commandsManager(socket, gameManager);
-    string command;
-    string arg;
+    char command[10];
+    char arg[10];
     vector<string> v;
     vector<string> args;
     //stringstream stringstream1;
-    while (true) {
+    //while (true) {
         int n = read(socket, buf , sizeof(buf));
         if (n == -1) {
             cout << "Error" << endl;
             return;
         }
-        arg = strstr(buf," ");
-        command = buf;
-        args.push_back(arg);
-        commandsManager.executeCommand(command, args, socket, gameManager);
-    }
+        sscanf(buf, "%s %s", command, arg);
+        //arg = strstr(buf," ");
+        //*(arg - 1) = '\0';
+        string strCom(command);
+        string strArg(arg);
+        args.push_back(strArg);
+        commandsManager.executeCommand(strCom, args, socket, gameManager);
+    //std:: cout <<
+   // }
 }
 // Handle requests from a specific client
 /*void Server::handlePlayers() {
@@ -144,4 +153,8 @@ void Server::handleClient(int socket) {
 
 void Server::stop() {
     close(serverSocket1);
+}
+
+int Server::getClientSocket() const {
+    return clientSocket;
 }

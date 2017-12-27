@@ -4,8 +4,9 @@
 
 #include "Games.h"
 
-Games::Games(string &name) {
+Games::Games(string &name, int socket1) {
     this->gameName = name;
+    this->socket1 = socket1;
 }
 /*void Games:: addPlayer(int socket) {
     this->
@@ -18,11 +19,11 @@ string Games::getGameName() {
     return countClients;
 }*/
 
-int Games::getSocket1()  {
+int Games::getSocket1() const {
     return socket1;
 }
 
-int Games::getSocket2()  {
+int Games::getSocket2() const {
     return socket2;
 }
 

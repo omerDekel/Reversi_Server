@@ -5,7 +5,13 @@
 #ifndef UNTITLED4_SERVER_H
 #define UNTITLED4_SERVER_H
 
+#include "stdio.h"
+#include "GameManager.h"
+#include <iostream>
+#include <sys/types.h>
+#include <vector>
 
+using namespace std;
 class Server {
 public:
     /**
@@ -25,9 +31,15 @@ public:
     void handlePlayers();
 
 private:
+    GameManager gameManager;
     int port1;
     int serverSocket1;
-    //int clientSocket[2];
+    //vector <pthread_t> threads;
+    int clientSocket;
+public:
+    int getClientSocket() const;
+
+private:
     /**
      * handle the players
      */

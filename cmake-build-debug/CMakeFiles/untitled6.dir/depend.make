@@ -35,6 +35,7 @@ CMakeFiles/untitled6.dir/StartCommand.cpp.o: ../Games.h
 CMakeFiles/untitled6.dir/StartCommand.cpp.o: ../StartCommand.cpp
 CMakeFiles/untitled6.dir/StartCommand.cpp.o: ../StartCommand.h
 
+CMakeFiles/untitled6.dir/main.cpp.o: ../GameManager.h
 CMakeFiles/untitled6.dir/main.cpp.o: ../Games.h
 CMakeFiles/untitled6.dir/main.cpp.o: ../Server.h
 CMakeFiles/untitled6.dir/main.cpp.o: ../main.cpp
