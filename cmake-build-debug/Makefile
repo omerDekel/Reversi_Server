@@ -231,6 +231,33 @@ JoinCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/JoinCommand.cpp.s
 .PHONY : JoinCommand.cpp.s
 
+ListCommand.o: ListCommand.cpp.o
+
+.PHONY : ListCommand.o
+
+# target to build an object file
+ListCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/ListCommand.cpp.o
+.PHONY : ListCommand.cpp.o
+
+ListCommand.i: ListCommand.cpp.i
+
+.PHONY : ListCommand.i
+
+# target to preprocess a source file
+ListCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/ListCommand.cpp.i
+.PHONY : ListCommand.cpp.i
+
+ListCommand.s: ListCommand.cpp.s
+
+.PHONY : ListCommand.s
+
+# target to generate assembly for a file
+ListCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/ListCommand.cpp.s
+.PHONY : ListCommand.cpp.s
+
 Server.o: Server.cpp.o
 
 .PHONY : Server.o
@@ -333,6 +360,9 @@ help:
 	@echo "... JoinCommand.o"
 	@echo "... JoinCommand.i"
 	@echo "... JoinCommand.s"
+	@echo "... ListCommand.o"
+	@echo "... ListCommand.i"
+	@echo "... ListCommand.s"
 	@echo "... Server.o"
 	@echo "... Server.i"
 	@echo "... Server.s"

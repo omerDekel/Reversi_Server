@@ -111,6 +111,12 @@
 		<Unit filename="/home/omer/CLionProjects/untitled6/JoinCommand.h">
 			<Option target="untitled6"/>
 		</Unit>
+		<Unit filename="/home/omer/CLionProjects/untitled6/ListCommand.cpp">
+			<Option target="untitled6"/>
+		</Unit>
+		<Unit filename="/home/omer/CLionProjects/untitled6/ListCommand.h">
+			<Option target="untitled6"/>
+		</Unit>
 		<Unit filename="/home/omer/CLionProjects/untitled6/Server.cpp">
 			<Option target="untitled6"/>
 		</Unit>

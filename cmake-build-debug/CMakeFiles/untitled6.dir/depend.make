@@ -7,6 +7,7 @@ CMakeFiles/untitled6.dir/CommandsManager.cpp.o: ../CommandsManager.h
 CMakeFiles/untitled6.dir/CommandsManager.cpp.o: ../GameManager.h
 CMakeFiles/untitled6.dir/CommandsManager.cpp.o: ../Games.h
 CMakeFiles/untitled6.dir/CommandsManager.cpp.o: ../JoinCommand.h
+CMakeFiles/untitled6.dir/CommandsManager.cpp.o: ../ListCommand.h
 CMakeFiles/untitled6.dir/CommandsManager.cpp.o: ../StartCommand.h
 
 CMakeFiles/untitled6.dir/GameManager.cpp.o: ../GameManager.cpp
@@ -21,6 +22,12 @@ CMakeFiles/untitled6.dir/JoinCommand.cpp.o: ../GameManager.h
 CMakeFiles/untitled6.dir/JoinCommand.cpp.o: ../Games.h
 CMakeFiles/untitled6.dir/JoinCommand.cpp.o: ../JoinCommand.cpp
 CMakeFiles/untitled6.dir/JoinCommand.cpp.o: ../JoinCommand.h
+
+CMakeFiles/untitled6.dir/ListCommand.cpp.o: ../Command.h
+CMakeFiles/untitled6.dir/ListCommand.cpp.o: ../GameManager.h
+CMakeFiles/untitled6.dir/ListCommand.cpp.o: ../Games.h
+CMakeFiles/untitled6.dir/ListCommand.cpp.o: ../ListCommand.cpp
+CMakeFiles/untitled6.dir/ListCommand.cpp.o: ../ListCommand.h
 
 CMakeFiles/untitled6.dir/Server.cpp.o: ../Command.h
 CMakeFiles/untitled6.dir/Server.cpp.o: ../CommandsManager.h

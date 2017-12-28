@@ -10,10 +10,10 @@ class StartCommand : public Command {
 public:
     virtual void execute(vector<string> args/*, int socket,GameManager &gameManager*/);
     //virtual ~Command() {}
-    StartCommand(int socket, GameManager &gameManager);
+    StartCommand(int socket, GameManager *gameManager);
 
 private:
     int socket;
-    GameManager gameManager;
+    GameManager *gameManager;
 };
 #endif //UNTITLED6_STARTCOMMAND_H

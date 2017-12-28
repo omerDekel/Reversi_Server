@@ -8,6 +8,7 @@ CMakeFiles/untitled6.dir/CommandsManager.cpp.o
  /home/omer/CLionProjects/untitled6/GameManager.h
  /home/omer/CLionProjects/untitled6/Games.h
  /home/omer/CLionProjects/untitled6/JoinCommand.h
+ /home/omer/CLionProjects/untitled6/ListCommand.h
  /home/omer/CLionProjects/untitled6/StartCommand.h
 CMakeFiles/untitled6.dir/GameManager.cpp.o
  /home/omer/CLionProjects/untitled6/GameManager.cpp
@@ -22,6 +23,12 @@ CMakeFiles/untitled6.dir/JoinCommand.cpp.o
  /home/omer/CLionProjects/untitled6/Games.h
  /home/omer/CLionProjects/untitled6/JoinCommand.cpp
  /home/omer/CLionProjects/untitled6/JoinCommand.h
+CMakeFiles/untitled6.dir/ListCommand.cpp.o
+ /home/omer/CLionProjects/untitled6/Command.h
+ /home/omer/CLionProjects/untitled6/GameManager.h
+ /home/omer/CLionProjects/untitled6/Games.h
+ /home/omer/CLionProjects/untitled6/ListCommand.cpp
+ /home/omer/CLionProjects/untitled6/ListCommand.h
 CMakeFiles/untitled6.dir/Server.cpp.o
  /home/omer/CLionProjects/untitled6/Command.h
  /home/omer/CLionProjects/untitled6/CommandsManager.h

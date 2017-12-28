@@ -10,14 +10,13 @@
 
 class CommandsManager {
     public:
-    CommandsManager(int socket,GameManager &gameManager);
+    CommandsManager(int socket, GameManager *gameManager);
     ~CommandsManager();
-    void executeCommand(string command, vector<string> args,int socket,GameManager &gameManager);
+    void executeCommand(string command, vector<string> args);
     private:
-        map<string, Command *> commandsMap;
+    map<string, Command *> commandsMap;
     int socket;
-    GameManager gameManager;
-    };
+};
 
 
 #endif //UNTITLED6_COMMANDSMANEGER_H

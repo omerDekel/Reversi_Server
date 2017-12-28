@@ -4,12 +4,12 @@
 
 #include <unistd.h>
 #include "JoinCommand.h"
-JoinCommand::JoinCommand(int socket,GameManager &gameManager) {
+JoinCommand::JoinCommand(int socket,GameManager *gameManager) {
     this->socket = socket;
     this->gameManager = gameManager;
 }
-void JoinCommand:: execute(vector<string> args/*, int socket,GameManager &gameManager*/) {
+void JoinCommand:: execute(vector<string> args) {
     std::cout <<"joined"<<std::endl;
-    gameManager.join_game(args[0], socket);
+    gameManager->join_game(args[0], socket);
     //close(socket);
 }

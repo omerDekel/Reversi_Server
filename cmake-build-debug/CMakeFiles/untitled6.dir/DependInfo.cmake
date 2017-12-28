@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/omer/CLionProjects/untitled6/GameManager.cpp" "/home/omer/CLionProjects/untitled6/cmake-build-debug/CMakeFiles/untitled6.dir/GameManager.cpp.o"
   "/home/omer/CLionProjects/untitled6/Games.cpp" "/home/omer/CLionProjects/untitled6/cmake-build-debug/CMakeFiles/untitled6.dir/Games.cpp.o"
   "/home/omer/CLionProjects/untitled6/JoinCommand.cpp" "/home/omer/CLionProjects/untitled6/cmake-build-debug/CMakeFiles/untitled6.dir/JoinCommand.cpp.o"
+  "/home/omer/CLionProjects/untitled6/ListCommand.cpp" "/home/omer/CLionProjects/untitled6/cmake-build-debug/CMakeFiles/untitled6.dir/ListCommand.cpp.o"
   "/home/omer/CLionProjects/untitled6/Server.cpp" "/home/omer/CLionProjects/untitled6/cmake-build-debug/CMakeFiles/untitled6.dir/Server.cpp.o"
   "/home/omer/CLionProjects/untitled6/StartCommand.cpp" "/home/omer/CLionProjects/untitled6/cmake-build-debug/CMakeFiles/untitled6.dir/StartCommand.cpp.o"
   "/home/omer/CLionProjects/untitled6/main.cpp" "/home/omer/CLionProjects/untitled6/cmake-build-debug/CMakeFiles/untitled6.dir/main.cpp.o"

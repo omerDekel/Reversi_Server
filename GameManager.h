@@ -10,7 +10,7 @@
 #include <vector>
 #include <pthread.h>
 #include "Games.h"
-
+using namespace std;
 class GameManager {
 public:
 
@@ -26,7 +26,11 @@ private:
     void _lock_mutex();
     void _unlock_mutex();
 
-    std::map<std::string, Games*> m_games;
+    map<string, Games*> m_games;
+public:
+    map<string , Games *> getM_games() ;
+
+private:
     pthread_mutex_t m_mutex;
     //GameManager &gameManager1;
 

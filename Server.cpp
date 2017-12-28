@@ -20,13 +20,13 @@ using namespace std;
 /*void *ExcuteThread (int socket) {
 
 }*/
-/*void *HandleClientThread(void *s) {
+void *HandleClientThread(void *s) {
     Server *myServer = (Server *)s;
     myServer->handleClient(myServer->getClientSocket());
-}*/
+}
 
 Server::Server(int port) : port1(port) , serverSocket1(0) {
-    //this->gameManager = gameManager;
+    gameManager = new GameManager();
     cout << "Server" << endl;
 }
 
@@ -34,7 +34,7 @@ void Server::start() {
     /*CommandsManager commandsManager;
     GameManager gameManager;*/
     vector<pthread_t> threads;
-    int count = 0;
+    pthread_t thread;
 // Create a socket point
     serverSocket1 = socket(AF_INET , SOCK_STREAM , 0);
     if (serverSocket1 == -1) {
@@ -60,19 +60,19 @@ void Server::start() {
     while (true) {
         cout << "Waiting for client connections..." << endl;
 
-// Accept a new client connection  תהליכונים
+// Accept a new client connection
         clientSocket = accept(serverSocket1 , (struct sockaddr *) &clientAddress , &clientAddressLen);
         cout << "client socket is" << clientSocket << endl;
         if (clientSocket == -1) {
             throw "Error on accept";
         }
 
-        /*int rc = pthread_create(&threads.back(), NULL, HandleClientThread ,this);
+        int rc = pthread_create(&thread, NULL, HandleClientThread ,this);
         if (rc) {
             cout << "Error: unable to create thread, " << rc << endl;
             exit(-1);
-        }*/
-        handleClient(clientSocket);
+        }
+        //handleClient(clientSocket);
 
 
         //count++;
@@ -90,13 +90,13 @@ void Server::start() {
 }
 void Server::handleClient(int socket) {
     //GameManager gameManager;
-    CommandsManager commandsManager(socket, gameManager);
+    CommandsManager commandsManager(socket,gameManager);
     char command[10];
     char arg[10];
     vector<string> v;
     vector<string> args;
     //stringstream stringstream1;
-    //while (true) {
+    while (true) {
         int n = read(socket, buf , sizeof(buf));
         if (n == -1) {
             cout << "Error" << endl;
@@ -108,9 +108,9 @@ void Server::handleClient(int socket) {
         string strCom(command);
         string strArg(arg);
         args.push_back(strArg);
-        commandsManager.executeCommand(strCom, args, socket, gameManager);
+        commandsManager.executeCommand(strCom, args);
     //std:: cout <<
-   // }
+    }
 }
 // Handle requests from a specific client
 /*void Server::handlePlayers() {
@@ -157,4 +157,7 @@ void Server::stop() {
 
 int Server::getClientSocket() const {
     return clientSocket;
+}
+Server::~Server() {
+    delete gameManager;
 }

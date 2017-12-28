@@ -15,10 +15,14 @@ using namespace std;
 class Server {
 public:
     /**
-     * constractor
+     * constructor
      * @param port
      */
     Server (int port);
+    /**
+     * destructor ;
+     */
+    ~Server();
     /**
      * start the server
      */
@@ -29,17 +33,14 @@ public:
     void handleClient(int socket);
     void stop();
     void handlePlayers();
+    int getClientSocket() const;
 
 private:
-    GameManager gameManager;
+    GameManager *gameManager;
     int port1;
     int serverSocket1;
     //vector <pthread_t> threads;
     int clientSocket;
-public:
-    int getClientSocket() const;
-
-private:
     /**
      * handle the players
      */

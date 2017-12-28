@@ -21,6 +21,8 @@ StartCommand.h
 /home/omer/CLionProjects/untitled6/StartCommand.h
 JoinCommand.h
 /home/omer/CLionProjects/untitled6/JoinCommand.h
+ListCommand.h
+/home/omer/CLionProjects/untitled6/ListCommand.h
 
 /home/omer/CLionProjects/untitled6/CommandsManager.h
 map
@@ -71,6 +73,18 @@ JoinCommand.h
 /home/omer/CLionProjects/untitled6/JoinCommand.h
 
 /home/omer/CLionProjects/untitled6/JoinCommand.h
+Command.h
+/home/omer/CLionProjects/untitled6/Command.h
+iostream
+-
+
+/home/omer/CLionProjects/untitled6/ListCommand.cpp
+unistd.h
+-
+ListCommand.h
+/home/omer/CLionProjects/untitled6/ListCommand.h
+
+/home/omer/CLionProjects/untitled6/ListCommand.h
 Command.h
 /home/omer/CLionProjects/untitled6/Command.h
 iostream
