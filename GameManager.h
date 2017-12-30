@@ -9,31 +9,21 @@
 #include <map>
 #include <vector>
 #include <pthread.h>
-#include "Games.h"
+#include "Game.h"
 using namespace std;
 class GameManager {
 public:
 
     std::vector<std::string> get_game_list() const;
-    //void start_game(const std::string& game_name);
     void join_game(std::string& game_name, int &player_socket);
     void add_game(std::string& game_name, int socket);
-    //std::vector<int> get_game_players(const std::string& game_name) const;
     void remove_game(const std::string& game_name);
-    void play_game(Games g);
-
+    void play_game(Game g);
+    map<string , Game *> getM_games() ;
+    ~GameManager();
 private:
-    void _lock_mutex();
-    void _unlock_mutex();
-
-    map<string, Games*> m_games;
-public:
-    map<string , Games *> getM_games() ;
-
-private:
+    map<string, Game*> m_games;
     pthread_mutex_t m_mutex;
-    //GameManager &gameManager1;
-
 };
 
 

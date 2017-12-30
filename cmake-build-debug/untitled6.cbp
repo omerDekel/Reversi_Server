@@ -93,16 +93,16 @@
 		<Unit filename="/home/omer/CLionProjects/untitled6/CommandsManager.h">
 			<Option target="untitled6"/>
 		</Unit>
+		<Unit filename="/home/omer/CLionProjects/untitled6/Game.cpp">
+			<Option target="untitled6"/>
+		</Unit>
+		<Unit filename="/home/omer/CLionProjects/untitled6/Game.h">
+			<Option target="untitled6"/>
+		</Unit>
 		<Unit filename="/home/omer/CLionProjects/untitled6/GameManager.cpp">
 			<Option target="untitled6"/>
 		</Unit>
 		<Unit filename="/home/omer/CLionProjects/untitled6/GameManager.h">
-			<Option target="untitled6"/>
-		</Unit>
-		<Unit filename="/home/omer/CLionProjects/untitled6/Games.cpp">
-			<Option target="untitled6"/>
-		</Unit>
-		<Unit filename="/home/omer/CLionProjects/untitled6/Games.h">
 			<Option target="untitled6"/>
 		</Unit>
 		<Unit filename="/home/omer/CLionProjects/untitled6/JoinCommand.cpp">

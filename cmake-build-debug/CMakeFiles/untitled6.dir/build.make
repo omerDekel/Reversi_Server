@@ -105,28 +105,28 @@ CMakeFiles/untitled6.dir/Server.cpp.o.provides: CMakeFiles/untitled6.dir/Server.
 CMakeFiles/untitled6.dir/Server.cpp.o.provides.build: CMakeFiles/untitled6.dir/Server.cpp.o
 
 
-CMakeFiles/untitled6.dir/Games.cpp.o: CMakeFiles/untitled6.dir/flags.make
-CMakeFiles/untitled6.dir/Games.cpp.o: ../Games.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omer/CLionProjects/untitled6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/untitled6.dir/Games.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled6.dir/Games.cpp.o -c /home/omer/CLionProjects/untitled6/Games.cpp
+CMakeFiles/untitled6.dir/Game.cpp.o: CMakeFiles/untitled6.dir/flags.make
+CMakeFiles/untitled6.dir/Game.cpp.o: ../Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omer/CLionProjects/untitled6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/untitled6.dir/Game.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled6.dir/Game.cpp.o -c /home/omer/CLionProjects/untitled6/Game.cpp
 
-CMakeFiles/untitled6.dir/Games.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled6.dir/Games.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omer/CLionProjects/untitled6/Games.cpp > CMakeFiles/untitled6.dir/Games.cpp.i
+CMakeFiles/untitled6.dir/Game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled6.dir/Game.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omer/CLionProjects/untitled6/Game.cpp > CMakeFiles/untitled6.dir/Game.cpp.i
 
-CMakeFiles/untitled6.dir/Games.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled6.dir/Games.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omer/CLionProjects/untitled6/Games.cpp -o CMakeFiles/untitled6.dir/Games.cpp.s
+CMakeFiles/untitled6.dir/Game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled6.dir/Game.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omer/CLionProjects/untitled6/Game.cpp -o CMakeFiles/untitled6.dir/Game.cpp.s
 
-CMakeFiles/untitled6.dir/Games.cpp.o.requires:
+CMakeFiles/untitled6.dir/Game.cpp.o.requires:
 
-.PHONY : CMakeFiles/untitled6.dir/Games.cpp.o.requires
+.PHONY : CMakeFiles/untitled6.dir/Game.cpp.o.requires
 
-CMakeFiles/untitled6.dir/Games.cpp.o.provides: CMakeFiles/untitled6.dir/Games.cpp.o.requires
-	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/Games.cpp.o.provides.build
-.PHONY : CMakeFiles/untitled6.dir/Games.cpp.o.provides
+CMakeFiles/untitled6.dir/Game.cpp.o.provides: CMakeFiles/untitled6.dir/Game.cpp.o.requires
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/Game.cpp.o.provides.build
+.PHONY : CMakeFiles/untitled6.dir/Game.cpp.o.provides
 
-CMakeFiles/untitled6.dir/Games.cpp.o.provides.build: CMakeFiles/untitled6.dir/Games.cpp.o
+CMakeFiles/untitled6.dir/Game.cpp.o.provides.build: CMakeFiles/untitled6.dir/Game.cpp.o
 
 
 CMakeFiles/untitled6.dir/StartCommand.cpp.o: CMakeFiles/untitled6.dir/flags.make
@@ -253,7 +253,7 @@ CMakeFiles/untitled6.dir/ListCommand.cpp.o.provides.build: CMakeFiles/untitled6.
 untitled6_OBJECTS = \
 "CMakeFiles/untitled6.dir/main.cpp.o" \
 "CMakeFiles/untitled6.dir/Server.cpp.o" \
-"CMakeFiles/untitled6.dir/Games.cpp.o" \
+"CMakeFiles/untitled6.dir/Game.cpp.o" \
 "CMakeFiles/untitled6.dir/StartCommand.cpp.o" \
 "CMakeFiles/untitled6.dir/GameManager.cpp.o" \
 "CMakeFiles/untitled6.dir/JoinCommand.cpp.o" \
@@ -265,7 +265,7 @@ untitled6_EXTERNAL_OBJECTS =
 
 untitled6: CMakeFiles/untitled6.dir/main.cpp.o
 untitled6: CMakeFiles/untitled6.dir/Server.cpp.o
-untitled6: CMakeFiles/untitled6.dir/Games.cpp.o
+untitled6: CMakeFiles/untitled6.dir/Game.cpp.o
 untitled6: CMakeFiles/untitled6.dir/StartCommand.cpp.o
 untitled6: CMakeFiles/untitled6.dir/GameManager.cpp.o
 untitled6: CMakeFiles/untitled6.dir/JoinCommand.cpp.o
@@ -283,7 +283,7 @@ CMakeFiles/untitled6.dir/build: untitled6
 
 CMakeFiles/untitled6.dir/requires: CMakeFiles/untitled6.dir/main.cpp.o.requires
 CMakeFiles/untitled6.dir/requires: CMakeFiles/untitled6.dir/Server.cpp.o.requires
-CMakeFiles/untitled6.dir/requires: CMakeFiles/untitled6.dir/Games.cpp.o.requires
+CMakeFiles/untitled6.dir/requires: CMakeFiles/untitled6.dir/Game.cpp.o.requires
 CMakeFiles/untitled6.dir/requires: CMakeFiles/untitled6.dir/StartCommand.cpp.o.requires
 CMakeFiles/untitled6.dir/requires: CMakeFiles/untitled6.dir/GameManager.cpp.o.requires
 CMakeFiles/untitled6.dir/requires: CMakeFiles/untitled6.dir/JoinCommand.cpp.o.requires

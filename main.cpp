@@ -3,24 +3,9 @@
 #include <stdlib.h>
 #include <fstream>
 
-#include "Games.h"
+#include "Game.h"
 
 using namespace std;
-
-/*void *StartThread(void *s) {
-
-}*/
-
-//Games g_game_list;
-
-/*int handle_single_player(void* player_socket)
-{
-    // got a list_games command
-    std::vector<std::string> games = g_game_list.get_game_list();
-    // turn games int blabla buffer
-    write(player_socket, blabla, sizeof(blabla));
-
-}*/
 
 
 int main() {

@@ -6,43 +6,56 @@
 #include <unistd.h>
 #include <cstring>
 #include "GameManager.h"
+
 using namespace std;
+
 void GameManager::join_game(std::string &game_name , int &player_socket) {
-    std::cout <<"hi"<<std::endl;
-    //int numOfClients;
-    //this->m_games.insert(game_name,);
-    std::cout<<m_games[game_name]->getGameName()<<std::endl;
-    std::cout << m_games.count(game_name)<< std:: endl;
-    if (m_games.count(game_name)) {
+    std::cout << m_games[game_name]->getGameName() << std::endl;
+    std::cout << m_games.count(game_name) << std::endl;
+    if (m_games.count(game_name) || m_games[game_name]->getCountClients() == 1) {
+        // locking the acces to the map.
+        pthread_mutex_trylock(&m_mutex);
         m_games[game_name]->setSocket2(player_socket);
-        /*numOfClients = m_games[game_name].getCountClients();
-        //m_games[game_name].setCountClients(numOfClients++);
-        if (numOfClients == 2) {
-            //thread handleplayers of the last projects .
-        }*/
-        std::cout <<"play"<<std::endl;
-        /*std::cout << m_games[game_name].getSocket1()<< std::endl;
-        std::cout<< m_games[game_name].getSocket2()<< std::endl;*/
+        pthread_mutex_unlock(&m_mutex);
+        std::cout << "play" << std::endl;
         play_game(*m_games[game_name]);
         close(m_games[game_name]->getSocket1());
         close(m_games[game_name]->getSocket2());
+        // unlock the acces to the map .
+        pthread_mutex_trylock(&m_mutex);
+        //deleting the game from the map .
         delete m_games[game_name];
         m_games.erase(game_name);
+        pthread_mutex_unlock(&m_mutex);
+    } else {
+        int n = write(player_socket , "-1" , sizeof("-1"));
+        if (n == -1) {
+            throw "couldnt write";
+        }
     }
 }
+
 void GameManager::add_game(std::string &game_name , int socket) {
     if (!m_games.count(game_name)) {
-        Games *game = new Games(game_name, socket);
-        this->m_games[game_name] = game ;
-        std::cout<<(m_games[game_name])->getGameName()<<std::endl;
+        Game *game = new Game(game_name , socket);
+        // locking the acces to the map.
+        pthread_mutex_trylock(&m_mutex);
+        this->m_games[game_name] = game;
+        // unlock the acces to the map .
+        pthread_mutex_unlock(&m_mutex);
+        std::cout << (m_games[game_name])->getGameName() << std::endl;
+    } else {
+        //sending error code to the client
+        int n = write(socket , "-1" , sizeof("-1"));
+        if (n == -1) {
+            throw "couldnt write";
+        }
+
     }
 }
-// Handle requests from a specific client
-void GameManager::play_game(Games g) {
-    std::cout <<"play    cjsajc here"<<std::endl;
+
+void GameManager::play_game(Game g) {
     int clientSocket[2];
-    /*std::cout <<socket1<< std::endl;
-    std::cout <<socket2<< std:: endl;*/
     clientSocket[0] = g.getSocket1();
     clientSocket[1] = g.getSocket2();
     write(clientSocket[0] , "1" , sizeof("1"));
@@ -58,7 +71,7 @@ void GameManager::play_game(Games g) {
         }
         // if one of the players disconnected .
         if (n == 0) {
-            cout << "player disconnected"<< endl;
+            cout << "player disconnected" << endl;
             return;
         }
         std::cout << "Got " << n << " bytes" << std::endl;
@@ -78,13 +91,23 @@ void GameManager::play_game(Games g) {
         }
         //if one of the players disconnected .
         if (n == 0) {
-            cout << "player disconnected"<< endl;
+            cout << "player disconnected" << endl;
             return;
         }
     }
 
 }
 
- map<string , Games *> GameManager::getM_games() {
+map<string , Game *> GameManager::getM_games() {
     return m_games;
+}
+/*
+ * destructor .
+ */
+GameManager::~GameManager() {
+    map<string , Game *>::iterator it;
+    for (it = m_games.begin(); it != m_games.end(); it++) {
+        delete it->second;
+    }
+
 }

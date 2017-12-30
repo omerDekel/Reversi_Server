@@ -13,9 +13,6 @@ class Command {
 public:
     virtual void execute(vector<string> args) =0;
     virtual ~Command() {}
-
-/*private:
-    int socket;*/
 };
 
 

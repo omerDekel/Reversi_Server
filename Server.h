@@ -27,23 +27,25 @@ public:
      * start the server
      */
     void start();
+
+    void handleClient(int socket);
     /**
      * stop the server
      */
-    void handleClient(int socket);
     void stop();
-    void handlePlayers();
     int getClientSocket() const;
+    /**
+     * stop to accept clients to connect the server .
+     */
+    void stopAccept();
 
 private:
     GameManager *gameManager;
     int port1;
     int serverSocket1;
-    //vector <pthread_t> threads;
+    bool shouldStop;
+    vector <pthread_t> threads;
     int clientSocket;
-    /**
-     * handle the players
-     */
     char buf[50];
 
 };

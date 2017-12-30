@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/untitled6.dir/main.cpp.o"
   "CMakeFiles/untitled6.dir/Server.cpp.o"
-  "CMakeFiles/untitled6.dir/Games.cpp.o"
+  "CMakeFiles/untitled6.dir/Game.cpp.o"
   "CMakeFiles/untitled6.dir/StartCommand.cpp.o"
   "CMakeFiles/untitled6.dir/GameManager.cpp.o"
   "CMakeFiles/untitled6.dir/JoinCommand.cpp.o"

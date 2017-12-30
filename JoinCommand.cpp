@@ -11,5 +11,4 @@ JoinCommand::JoinCommand(int socket,GameManager *gameManager) {
 void JoinCommand:: execute(vector<string> args) {
     std::cout <<"joined"<<std::endl;
     gameManager->join_game(args[0], socket);
-    //close(socket);
 }

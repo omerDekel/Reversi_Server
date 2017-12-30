@@ -150,6 +150,33 @@ CommandsManager.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/CommandsManager.cpp.s
 .PHONY : CommandsManager.cpp.s
 
+Game.o: Game.cpp.o
+
+.PHONY : Game.o
+
+# target to build an object file
+Game.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/Game.cpp.o
+.PHONY : Game.cpp.o
+
+Game.i: Game.cpp.i
+
+.PHONY : Game.i
+
+# target to preprocess a source file
+Game.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/Game.cpp.i
+.PHONY : Game.cpp.i
+
+Game.s: Game.cpp.s
+
+.PHONY : Game.s
+
+# target to generate assembly for a file
+Game.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/Game.cpp.s
+.PHONY : Game.cpp.s
+
 GameManager.o: GameManager.cpp.o
 
 .PHONY : GameManager.o
@@ -176,33 +203,6 @@ GameManager.s: GameManager.cpp.s
 GameManager.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/GameManager.cpp.s
 .PHONY : GameManager.cpp.s
-
-Games.o: Games.cpp.o
-
-.PHONY : Games.o
-
-# target to build an object file
-Games.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/Games.cpp.o
-.PHONY : Games.cpp.o
-
-Games.i: Games.cpp.i
-
-.PHONY : Games.i
-
-# target to preprocess a source file
-Games.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/Games.cpp.i
-.PHONY : Games.cpp.i
-
-Games.s: Games.cpp.s
-
-.PHONY : Games.s
-
-# target to generate assembly for a file
-Games.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/Games.cpp.s
-.PHONY : Games.cpp.s
 
 JoinCommand.o: JoinCommand.cpp.o
 
@@ -351,12 +351,12 @@ help:
 	@echo "... CommandsManager.o"
 	@echo "... CommandsManager.i"
 	@echo "... CommandsManager.s"
+	@echo "... Game.o"
+	@echo "... Game.i"
+	@echo "... Game.s"
 	@echo "... GameManager.o"
 	@echo "... GameManager.i"
 	@echo "... GameManager.s"
-	@echo "... Games.o"
-	@echo "... Games.i"
-	@echo "... Games.s"
 	@echo "... JoinCommand.o"
 	@echo "... JoinCommand.i"
 	@echo "... JoinCommand.s"

@@ -9,7 +9,6 @@
 CommandsManager::CommandsManager(int socket1, GameManager *gameManager) {
     this->socket = socket1;
     commandsMap["start"] = new StartCommand(socket,gameManager);
-    //delete
     commandsMap["join"] = new JoinCommand(socket,gameManager);
     commandsMap["list_games"] = new ListCommand(socket, gameManager);
 }

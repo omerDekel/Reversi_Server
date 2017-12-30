@@ -30,6 +30,20 @@ map
 Command.h
 /home/omer/CLionProjects/untitled6/Command.h
 
+/home/omer/CLionProjects/untitled6/Game.cpp
+Game.h
+/home/omer/CLionProjects/untitled6/Game.h
+
+/home/omer/CLionProjects/untitled6/Game.h
+string
+-
+map
+-
+vector
+-
+pthread.h
+-
+
 /home/omer/CLionProjects/untitled6/GameManager.cpp
 iostream
 -
@@ -49,22 +63,8 @@ vector
 -
 pthread.h
 -
-Games.h
-/home/omer/CLionProjects/untitled6/Games.h
-
-/home/omer/CLionProjects/untitled6/Games.cpp
-Games.h
-/home/omer/CLionProjects/untitled6/Games.h
-
-/home/omer/CLionProjects/untitled6/Games.h
-string
--
-map
--
-vector
--
-pthread.h
--
+Game.h
+/home/omer/CLionProjects/untitled6/Game.h
 
 /home/omer/CLionProjects/untitled6/JoinCommand.cpp
 unistd.h
@@ -131,8 +131,6 @@ vector
 -
 
 /home/omer/CLionProjects/untitled6/StartCommand.cpp
-unistd.h
--
 StartCommand.h
 /home/omer/CLionProjects/untitled6/StartCommand.h
 
@@ -151,6 +149,6 @@ stdlib.h
 -
 fstream
 -
-Games.h
-/home/omer/CLionProjects/untitled6/Games.h
+Game.h
+/home/omer/CLionProjects/untitled6/Game.h
 

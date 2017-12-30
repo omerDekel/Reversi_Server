@@ -9,7 +9,6 @@
 class StartCommand : public Command {
 public:
     virtual void execute(vector<string> args/*, int socket,GameManager &gameManager*/);
-    //virtual ~Command() {}
     StartCommand(int socket, GameManager *gameManager);
 
 private:
