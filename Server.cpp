@@ -17,6 +17,9 @@
 using namespace boost ::algorithm;
 using namespace std;
 
+#define MAX_CONNECTED_CLIENTS 10
+#define MAX_COMMAND_LEN 20
+#define MAX_ARG_LEN 20
 void *stopServerThread (void *s) {
     Server *myServer = (Server *)s;
     string exit = "";
@@ -40,8 +43,6 @@ Server::Server(int port) : port1(port) , serverSocket1(0), shouldStop(false) {
 }
 
 void Server::start() {
-    /*CommandsManager commandsManager;
-    GameManager gameManager;*/
     pthread_t thread;
     pthread_t pthread;
 // Create a socket point
@@ -60,11 +61,10 @@ void Server::start() {
         throw "Error on binding";
     }
 // Start listening to incoming connections
-    listen(serverSocket1 , 2);
+    listen(serverSocket1 , MAX_CONNECTED_CLIENTS);
 // Define the client socket's structures
     struct sockaddr_in clientAddress;
     socklen_t clientAddressLen = sizeof((struct sockaddr*) &clientAddress);
-    //pthread_t threads[100];
     int rc = pthread_create(&pthread, NULL, stopServerThread, (void*)this);
     if (rc) {
         cout << "Error: unable to create thread, " << rc << endl;
@@ -90,8 +90,8 @@ void Server::start() {
 }
 void Server::handleClient(int socket) {
     CommandsManager commandsManager(socket,gameManager);
-    char command[10];
-    char arg[10];
+    char command[MAX_COMMAND_LEN];
+    char arg[MAX_ARG_LEN];
     while (true) {
         vector<string> args;
         int n = read(socket, buf , sizeof(buf));
@@ -104,7 +104,7 @@ void Server::handleClient(int socket) {
         string strArg(arg);
         args.push_back(strArg);
         commandsManager.executeCommand(strCom, args);
-        if (strCom == "start")
+        if (strCom == "start" || strCom == "join")
         {
             break;
         }
@@ -128,6 +128,10 @@ void Server::stop() {
         iterator1++;
     }
     close(serverSocket1);
+    map<string , Game *>::iterator it2;
+    for (it2 = gameManager->getM_games().begin(); it2 != gameManager->getM_games().end(); it2++) {
+        delete it2->second;
+    }
     delete gameManager;
     exit(1);
 }
@@ -136,5 +140,10 @@ int Server::getClientSocket() const {
     return clientSocket;
 }
 Server::~Server() {
+    map<string , Game *>::iterator it;
+    for (it = gameManager->getM_games().begin(); it != gameManager->getM_games().end(); it++) {
+        delete it->second;
+    }
+
     delete gameManager;
 }

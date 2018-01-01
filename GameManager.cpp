@@ -10,23 +10,23 @@
 using namespace std;
 
 void GameManager::join_game(std::string &game_name , int &player_socket) {
-    std::cout << m_games[game_name]->getGameName() << std::endl;
-    std::cout << m_games.count(game_name) << std::endl;
-    if (m_games.count(game_name) || m_games[game_name]->getCountClients() == 1) {
-        // locking the acces to the map.
-        pthread_mutex_trylock(&m_mutex);
-        m_games[game_name]->setSocket2(player_socket);
-        pthread_mutex_unlock(&m_mutex);
-        std::cout << "play" << std::endl;
-        play_game(*m_games[game_name]);
-        close(m_games[game_name]->getSocket1());
-        close(m_games[game_name]->getSocket2());
-        // unlock the acces to the map .
-        pthread_mutex_trylock(&m_mutex);
-        //deleting the game from the map .
-        delete m_games[game_name];
-        m_games.erase(game_name);
-        pthread_mutex_unlock(&m_mutex);
+    if (m_games.count(game_name))  {
+        if (m_games[game_name]->getCountClients() == 1) {
+            // locking the access to the map.
+            pthread_mutex_lock(&m_mutex);
+            m_games[game_name]->setSocket2(player_socket);
+            pthread_mutex_unlock(&m_mutex);
+            std::cout << "play" << std::endl;
+            play_game(*m_games[game_name]);
+            close(m_games[game_name]->getSocket1());
+            close(m_games[game_name]->getSocket2());
+            // unlock the acces to the map .
+            pthread_mutex_lock(&m_mutex);
+            //deleting the game from the map .
+            delete m_games[game_name];
+            m_games.erase(game_name);
+            pthread_mutex_unlock(&m_mutex);
+        }
     } else {
         int n = write(player_socket , "-1" , sizeof("-1"));
         if (n == -1) {
@@ -39,7 +39,7 @@ void GameManager::add_game(std::string &game_name , int socket) {
     if (!m_games.count(game_name)) {
         Game *game = new Game(game_name , socket);
         // locking the acces to the map.
-        pthread_mutex_trylock(&m_mutex);
+        pthread_mutex_lock(&m_mutex);
         this->m_games[game_name] = game;
         // unlock the acces to the map .
         pthread_mutex_unlock(&m_mutex);
@@ -100,14 +100,4 @@ void GameManager::play_game(Game g) {
 
 map<string , Game *> GameManager::getM_games() {
     return m_games;
-}
-/*
- * destructor .
- */
-GameManager::~GameManager() {
-    map<string , Game *>::iterator it;
-    for (it = m_games.begin(); it != m_games.end(); it++) {
-        delete it->second;
-    }
-
 }

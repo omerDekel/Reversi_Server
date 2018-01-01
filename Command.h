@@ -11,7 +11,14 @@
 using namespace std;
 class Command {
 public:
+    /**
+     * execute the command
+     * @param args the args
+     */
     virtual void execute(vector<string> args) =0;
+    /**
+     * distractor.
+     */
     virtual ~Command() {}
 };
 

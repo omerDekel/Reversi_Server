@@ -27,12 +27,19 @@ public:
      * start the server
      */
     void start();
-
+    /**
+     * handle client.
+     * @param socket the socket.
+     */
     void handleClient(int socket);
     /**
      * stop the server
      */
     void stop();
+    /**
+     * getting client socket.
+     * @return
+     */
     int getClientSocket() const;
     /**
      * stop to accept clients to connect the server .

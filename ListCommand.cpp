@@ -14,7 +14,7 @@ void ListCommand::execute(vector<string> args) {
     for (it = gameManager->getM_games().begin(); it != gameManager->getM_games().end(); it++) {
         if (it->second->getSocket2() == 0) {
             strGames = strGames+ " " +it->first;
-            cout <<"list"<< it->first << endl;
+            cout <<"add to list "<< it->first << endl;
         }
     }
     int n = write(socket, strGames.c_str(), strGames.size());

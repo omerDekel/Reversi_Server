@@ -10,7 +10,16 @@
 
 class ListCommand: public Command {
 public:
+    /**
+     * constructor.
+     * @param socket the socket.
+     * @param gameManager the game manager.
+     */
     ListCommand(int socket, GameManager *gameManager);
+    /**
+     * execute the list command.
+     * @param args the args.
+     */
     virtual void execute(vector<string> args/*, int socket,GameManager &gameManager*/);
 
 private:
