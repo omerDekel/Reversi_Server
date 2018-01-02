@@ -12,8 +12,8 @@ int main() {
     ifstream inFile;
     int port;
     inFile.open("/home/omer/CLionProjects/untitled6/settings");
-    inFile>> port;
-    cout<<port;
+    inFile >> port;
+    cout << port;
     Server server(port);
     inFile.close();
     try {

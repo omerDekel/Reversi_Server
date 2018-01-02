@@ -14,14 +14,16 @@
 #include <boost/algorithm/string/classification.hpp>
 #include <boost/algorithm/string/split.hpp>
 #include <boost/foreach.hpp>
-using namespace boost ::algorithm;
+
+using namespace boost::algorithm;
 using namespace std;
 
 #define MAX_CONNECTED_CLIENTS 10
 #define MAX_COMMAND_LEN 20
 #define MAX_ARG_LEN 20
-void *stopServerThread (void *s) {
-    Server *myServer = (Server *)s;
+
+void *stopServerThread(void *s) {
+    Server *myServer = (Server *) s;
     string exit = "";
     do {
         if (exit == "exit") {
@@ -29,15 +31,16 @@ void *stopServerThread (void *s) {
             myServer->stop();
             break;
         }
-        cin>> exit;
-    }while (true);
+        cin >> exit;
+    } while (true);
 }
+
 void *HandleClientThread(void *s) {
-    Server *myServer = (Server *)s;
+    Server *myServer = (Server *) s;
     myServer->handleClient(myServer->getClientSocket());
 }
 
-Server::Server(int port) : port1(port) , serverSocket1(0), shouldStop(false) {
+Server::Server(int port) : port1(port) , serverSocket1(0) , shouldStop(false) {
     gameManager = new GameManager();
     cout << "Server" << endl;
 }
@@ -64,8 +67,8 @@ void Server::start() {
     listen(serverSocket1 , MAX_CONNECTED_CLIENTS);
 // Define the client socket's structures
     struct sockaddr_in clientAddress;
-    socklen_t clientAddressLen = sizeof((struct sockaddr*) &clientAddress);
-    int rc = pthread_create(&pthread, NULL, stopServerThread, (void*)this);
+    socklen_t clientAddressLen = sizeof((struct sockaddr *) &clientAddress);
+    int rc = pthread_create(&pthread , NULL , stopServerThread , (void *) this);
     if (rc) {
         cout << "Error: unable to create thread, " << rc << endl;
         exit(-1);
@@ -80,7 +83,7 @@ void Server::start() {
             throw "Error on accept";
         }
 
-        int rc = pthread_create(&thread, NULL, HandleClientThread ,this);
+        int rc = pthread_create(&thread , NULL , HandleClientThread , this);
         if (rc) {
             cout << "Error: unable to create thread, " << rc << endl;
             exit(-1);
@@ -88,28 +91,29 @@ void Server::start() {
         threads.push_back(thread);
     }
 }
+
 void Server::handleClient(int socket) {
-    CommandsManager commandsManager(socket,gameManager);
+    CommandsManager commandsManager(socket , gameManager);
     char command[MAX_COMMAND_LEN];
     char arg[MAX_ARG_LEN];
     while (true) {
         vector<string> args;
-        int n = read(socket, buf , sizeof(buf));
+        int n = read(socket , buf , sizeof(buf));
         if (n == -1) {
             cout << "Error" << endl;
             return;
         }
-        sscanf(buf, "%s %s", command, arg);
+        sscanf(buf , "%s %s" , command , arg);
         string strCom(command);
         string strArg(arg);
         args.push_back(strArg);
-        commandsManager.executeCommand(strCom, args);
-        if (strCom == "start" || strCom == "join")
-        {
+        commandsManager.executeCommand(strCom , args);
+        if (strCom == "start" || strCom == "join") {
             break;
         }
     }
 }
+
 void Server::stopAccept() {
     this->shouldStop = true;
 }
@@ -122,7 +126,7 @@ void Server::stop() {
             close(it->second->getSocket2());
         }
     }
-    vector<pthread_t >:: iterator iterator1 = threads.begin();
+    vector<pthread_t>::iterator iterator1 = threads.begin();
     while (threads.end() != iterator1 && !threads.empty()) {
         pthread_cancel(*iterator1);
         iterator1++;
@@ -139,6 +143,7 @@ void Server::stop() {
 int Server::getClientSocket() const {
     return clientSocket;
 }
+
 Server::~Server() {
     map<string , Game *>::iterator it;
     for (it = gameManager->getM_games().begin(); it != gameManager->getM_games().end(); it++) {

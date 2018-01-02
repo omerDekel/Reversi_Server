@@ -4,12 +4,13 @@
 
 #include "Game.h"
 
-Game::Game(string &name, int socket1) {
+Game::Game(string &name , int socket1) {
     this->gameName = name;
     this->socket1 = socket1;
     this->countClients = 1;
     this->socket2 = 0;
 }
+
 string Game::getGameName() {
     return gameName;
 }

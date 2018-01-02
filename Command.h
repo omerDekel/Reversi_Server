@@ -4,11 +4,13 @@
 
 #ifndef UNTITLED6_COMMAND_H
 #define UNTITLED6_COMMAND_H
+
 #include <vector>
 #include <string>
 #include "GameManager.h"
 
 using namespace std;
+
 class Command {
 public:
     /**
@@ -16,6 +18,7 @@ public:
      * @param args the args
      */
     virtual void execute(vector<string> args) =0;
+
     /**
      * distractor.
      */

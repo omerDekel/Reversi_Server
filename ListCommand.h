@@ -8,14 +8,15 @@
 #include "Command.h"
 #include <iostream>
 
-class ListCommand: public Command {
+class ListCommand : public Command {
 public:
     /**
      * constructor.
      * @param socket the socket.
      * @param gameManager the game manager.
      */
-    ListCommand(int socket, GameManager *gameManager);
+    ListCommand(int socket , GameManager *gameManager);
+
     /**
      * execute the list command.
      * @param args the args.

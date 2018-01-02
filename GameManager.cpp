@@ -10,7 +10,7 @@
 using namespace std;
 
 void GameManager::join_game(std::string &game_name , int &player_socket) {
-    if (m_games.count(game_name))  {
+    if (m_games.count(game_name)) {
         if (m_games[game_name]->getCountClients() == 1) {
             // locking the access to the map.
             pthread_mutex_lock(&m_mutex);
@@ -100,4 +100,8 @@ void GameManager::play_game(Game g) {
 
 map<string , Game *> GameManager::getM_games() {
     return m_games;
+}
+
+pthread_mutex_t *GameManager::getM_mutex() {
+    return &m_mutex;
 }

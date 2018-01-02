@@ -81,6 +81,8 @@ iostream
 /home/omer/CLionProjects/untitled6/ListCommand.cpp
 unistd.h
 -
+cstring
+-
 ListCommand.h
 /home/omer/CLionProjects/untitled6/ListCommand.h
 

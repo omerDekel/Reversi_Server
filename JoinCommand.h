@@ -7,20 +7,23 @@
 
 #include "Command.h"
 #include <iostream>
+
 using namespace std;
-class JoinCommand :  public Command {
+
+class JoinCommand : public Command {
 public:
     /**
      * execute the jion command.
      * @param args the args.
      */
     virtual void execute(vector<string> args/*, int socket,GameManager &gameManager*/);
+
     /**
      * constructor.
      * @param socket the socket.
      * @param gameManager the game manager.
      */
-    JoinCommand(int socket, GameManager *gameManager);
+    JoinCommand(int socket , GameManager *gameManager);
 
 private:
     int socket;

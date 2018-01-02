@@ -12,35 +12,42 @@
 #include <vector>
 
 using namespace std;
+
 class Server {
 public:
     /**
      * constructor
      * @param port
      */
-    Server (int port);
+    Server(int port);
+
     /**
      * destructor ;
      */
     ~Server();
+
     /**
      * start the server
      */
     void start();
+
     /**
      * handle client.
      * @param socket the socket.
      */
     void handleClient(int socket);
+
     /**
      * stop the server
      */
     void stop();
+
     /**
      * getting client socket.
      * @return
      */
     int getClientSocket() const;
+
     /**
      * stop to accept clients to connect the server .
      */
@@ -51,7 +58,7 @@ private:
     int port1;
     int serverSocket1;
     bool shouldStop;
-    vector <pthread_t> threads;
+    vector<pthread_t> threads;
     int clientSocket;
     char buf[50];
 
