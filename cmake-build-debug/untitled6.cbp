@@ -129,6 +129,15 @@
 		<Unit filename="/home/omer/CLionProjects/untitled6/StartCommand.h">
 			<Option target="untitled6"/>
 		</Unit>
+		<Unit filename="/home/omer/CLionProjects/untitled6/Task.h">
+			<Option target="untitled6"/>
+		</Unit>
+		<Unit filename="/home/omer/CLionProjects/untitled6/ThreadPool.cpp">
+			<Option target="untitled6"/>
+		</Unit>
+		<Unit filename="/home/omer/CLionProjects/untitled6/ThreadPool.h">
+			<Option target="untitled6"/>
+		</Unit>
 		<Unit filename="/home/omer/CLionProjects/untitled6/main.cpp">
 			<Option target="untitled6"/>
 		</Unit>

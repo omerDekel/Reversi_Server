@@ -7,6 +7,7 @@
 
 #include "stdio.h"
 #include "GameManager.h"
+#include "ThreadPool.h"
 #include <iostream>
 #include <sys/types.h>
 #include <vector>
@@ -58,9 +59,9 @@ private:
     int port1;
     int serverSocket1;
     bool shouldStop;
-    vector<pthread_t> threads;
     int clientSocket;
     char buf[50];
+    ThreadPool threadPool;
 
 };
 

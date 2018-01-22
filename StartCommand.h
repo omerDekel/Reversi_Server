@@ -14,7 +14,7 @@ public:
      * execute the command.
      * @param args the args
      */
-    virtual void execute(vector<string> args/*, int socket,GameManager &gameManager*/);
+    virtual void execute(vector<string> args);
 
     /**
      * constructor

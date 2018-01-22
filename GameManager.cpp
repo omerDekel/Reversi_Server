@@ -36,6 +36,7 @@ void GameManager::join_game(std::string &game_name , int &player_socket) {
 }
 
 void GameManager::add_game(std::string &game_name , int socket) {
+
     if (!m_games.count(game_name)) {
         Game *game = new Game(game_name , socket);
         // locking the acces to the map.
@@ -43,6 +44,7 @@ void GameManager::add_game(std::string &game_name , int socket) {
         this->m_games[game_name] = game;
         // unlock the acces to the map .
         pthread_mutex_unlock(&m_mutex);
+
         std::cout << (m_games[game_name])->getGameName() << std::endl;
     } else {
         //sending error code to the client

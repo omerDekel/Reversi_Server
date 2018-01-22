@@ -21,7 +21,7 @@ using namespace std;
 #define MAX_CONNECTED_CLIENTS 10
 #define MAX_COMMAND_LEN 20
 #define MAX_ARG_LEN 20
-
+#define MAX_THREADS 5
 void *stopServerThread(void *s) {
     Server *myServer = (Server *) s;
     string exit = "";
@@ -40,13 +40,12 @@ void *HandleClientThread(void *s) {
     myServer->handleClient(myServer->getClientSocket());
 }
 
-Server::Server(int port) : port1(port) , serverSocket1(0) , shouldStop(false) {
+Server::Server(int port) : port1(port) , serverSocket1(0) , shouldStop(false),threadPool(MAX_THREADS) {
     gameManager = new GameManager();
     cout << "Server" << endl;
 }
 
 void Server::start() {
-    pthread_t thread;
     pthread_t pthread;
 // Create a socket point
     serverSocket1 = socket(AF_INET , SOCK_STREAM , 0);
@@ -82,14 +81,10 @@ void Server::start() {
         if (clientSocket == -1) {
             throw "Error on accept";
         }
-
-        int rc = pthread_create(&thread , NULL , HandleClientThread , this);
-        if (rc) {
-            cout << "Error: unable to create thread, " << rc << endl;
-            exit(-1);
-        }
-        threads.push_back(thread);
+        Task task(HandleClientThread ,this);
+        threadPool.addTask(&task);
     }
+
 }
 
 void Server::handleClient(int socket) {
@@ -102,6 +97,9 @@ void Server::handleClient(int socket) {
         if (n == -1) {
             cout << "Error" << endl;
             return;
+        }
+        if (n == 0) {
+            break;
         }
         sscanf(buf , "%s %s" , command , arg);
         string strCom(command);
@@ -126,11 +124,7 @@ void Server::stop() {
             close(it->second->getSocket2());
         }
     }
-    vector<pthread_t>::iterator iterator1 = threads.begin();
-    while (threads.end() != iterator1 && !threads.empty()) {
-        pthread_cancel(*iterator1);
-        iterator1++;
-    }
+    threadPool.terminate();
     close(serverSocket1);
     map<string , Game *>::iterator it2;
     for (it2 = gameManager->getM_games().begin(); it2 != gameManager->getM_games().end(); it2++) {

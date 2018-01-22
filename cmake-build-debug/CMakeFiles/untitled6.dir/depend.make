@@ -35,6 +35,8 @@ CMakeFiles/untitled6.dir/Server.cpp.o: ../Game.h
 CMakeFiles/untitled6.dir/Server.cpp.o: ../GameManager.h
 CMakeFiles/untitled6.dir/Server.cpp.o: ../Server.cpp
 CMakeFiles/untitled6.dir/Server.cpp.o: ../Server.h
+CMakeFiles/untitled6.dir/Server.cpp.o: ../Task.h
+CMakeFiles/untitled6.dir/Server.cpp.o: ../ThreadPool.h
 
 CMakeFiles/untitled6.dir/StartCommand.cpp.o: ../Command.h
 CMakeFiles/untitled6.dir/StartCommand.cpp.o: ../Game.h
@@ -42,8 +44,14 @@ CMakeFiles/untitled6.dir/StartCommand.cpp.o: ../GameManager.h
 CMakeFiles/untitled6.dir/StartCommand.cpp.o: ../StartCommand.cpp
 CMakeFiles/untitled6.dir/StartCommand.cpp.o: ../StartCommand.h
 
+CMakeFiles/untitled6.dir/ThreadPool.cpp.o: ../Task.h
+CMakeFiles/untitled6.dir/ThreadPool.cpp.o: ../ThreadPool.cpp
+CMakeFiles/untitled6.dir/ThreadPool.cpp.o: ../ThreadPool.h
+
 CMakeFiles/untitled6.dir/main.cpp.o: ../Game.h
 CMakeFiles/untitled6.dir/main.cpp.o: ../GameManager.h
 CMakeFiles/untitled6.dir/main.cpp.o: ../Server.h
+CMakeFiles/untitled6.dir/main.cpp.o: ../Task.h
+CMakeFiles/untitled6.dir/main.cpp.o: ../ThreadPool.h
 CMakeFiles/untitled6.dir/main.cpp.o: ../main.cpp
 

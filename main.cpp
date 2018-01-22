@@ -11,7 +11,12 @@ using namespace std;
 int main() {
     ifstream inFile;
     int port;
-    inFile.open("/home/omer/CLionProjects/untitled6/settings");
+    try {
+        inFile.open("/home/omer/CLionProjects/untitled6/settings");
+    } catch (...) {
+        cout << "couldn't open the settings file"<< endl;
+        exit(-1);
+    }
     inFile >> port;
     cout << port;
     Server server(port);
